@@ -79,19 +79,20 @@
 
 
 
-<meta name="description" content="第三周：浅层神经网络(Shallow neural networks)3.1 神经网络概述（Neural Network Overview） 传统的一个神经对比神经网络  ![ch](http:&#x2F;&#x2F;www.ai-start.com&#x2F;dl2017&#x2F;images&#x2F;L1_week3_1.png)  [Tyora 插入公式](https:&#x2F;&#x2F;blog.csdn.net&#x2F;mingzhuo_126&#x2F;artic">
+<meta name="description" content="第三周：浅层神经网络(Shallow neural networks)3.1 神经网络概述（Neural Network Overview） 传统的一个神经对比神经网络   Tyora 插入公式  3.2 神经网络的表示（Neural Network Representation） 换分为： 输入层+隐藏层+输出层 图示为一个两层的神经网络。">
 <meta name="keywords" content="python,深度学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深度学习和神经网络—— 三">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;24&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94-%E4%B8%89&#x2F;index.html">
 <meta property="og:site_name" content="无名的Blog">
-<meta property="og:description" content="第三周：浅层神经网络(Shallow neural networks)3.1 神经网络概述（Neural Network Overview） 传统的一个神经对比神经网络  ![ch](http:&#x2F;&#x2F;www.ai-start.com&#x2F;dl2017&#x2F;images&#x2F;L1_week3_1.png)  [Tyora 插入公式](https:&#x2F;&#x2F;blog.csdn.net&#x2F;mingzhuo_126&#x2F;artic">
+<meta property="og:description" content="第三周：浅层神经网络(Shallow neural networks)3.1 神经网络概述（Neural Network Overview） 传统的一个神经对比神经网络   Tyora 插入公式  3.2 神经网络的表示（Neural Network Representation） 换分为： 输入层+隐藏层+输出层 图示为一个两层的神经网络。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;24&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94-%E4%B8%89&#x2F;Users&#x2F;11266&#x2F;hexo&#x2F;source&#x2F;_posts&#x2F;image&#x2F;捕获1.PNG">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;24&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94-%E4%B8%89&#x2F;C:%5CUsers%5C11266%5Chexo%5Csource_posts%5Cimage%5C%E6%8D%95%E8%8E%B72.PNG">
-<meta property="og:updated_time" content="2019-11-24T11:33:25.005Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;%E6%8D%95%E8%8E%B71.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.ai-start.com&#x2F;dl2017&#x2F;images&#x2F;L1_week3_1.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;24&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94-%E4%B8%89&#x2F;Users&#x2F;11266&#x2F;hexo&#x2F;source&#x2F;_posts&#x2F;image&#x2F;%E6%8D%95%E8%8E%B72.PNG">
+<meta property="og:updated_time" content="2019-11-24T15:02:01.111Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;24&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94-%E4%B8%89&#x2F;Users&#x2F;11266&#x2F;hexo&#x2F;source&#x2F;_posts&#x2F;image&#x2F;捕获1.PNG">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;%E6%8D%95%E8%8E%B71.png">
 
 
 
@@ -353,11 +354,11 @@
       
         <h2 id="第三周：浅层神经网络-Shallow-neural-networks"><a href="#第三周：浅层神经网络-Shallow-neural-networks" class="headerlink" title="第三周：浅层神经网络(Shallow neural networks)"></a>第三周：浅层神经网络(Shallow neural networks)</h2><h3 id="3-1-神经网络概述（Neural-Network-Overview）"><a href="#3-1-神经网络概述（Neural-Network-Overview）" class="headerlink" title="3.1 神经网络概述（Neural Network Overview）"></a>3.1 神经网络概述（Neural Network Overview）</h3><hr>
 <p>传统的一个神经对比神经网络</p>
-<img src="/2019/11/24/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94-%E4%B8%89/Users\11266\hexo\source\_posts\image\捕获1.PNG">
-![ch](http://www.ai-start.com/dl2017/images/L1_week3_1.png)
- [Tyora 插入公式](https://blog.csdn.net/mingzhuo_126/article/details/82722455)
-
-<h3 id="3-2-神经网络的表示（Neural-Network-Representation）"><a href="#3-2-神经网络的表示（Neural-Network-Representation）" class="headerlink" title="3.2 神经网络的表示（Neural Network Representation）"></a>3.2 神经网络的表示（Neural Network Representation）</h3><p><img src="/2019/11/24/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94-%E4%B8%89/C:%5CUsers%5C11266%5Chexo%5Csource_posts%5Cimage%5C%E6%8D%95%E8%8E%B72.PNG" alt="捕获2"></p>
+<p><img src="/%E6%8D%95%E8%8E%B71.png" alt="nihao"><br><img src="http://www.ai-start.com/dl2017/images/L1_week3_1.png" alt></p>
+<blockquote>
+<p><a href="https://blog.csdn.net/mingzhuo_126/article/details/82722455" target="_blank" rel="noopener">Tyora 插入公式</a></p>
+</blockquote>
+<h3 id="3-2-神经网络的表示（Neural-Network-Representation）"><a href="#3-2-神经网络的表示（Neural-Network-Representation）" class="headerlink" title="3.2 神经网络的表示（Neural Network Representation）"></a>3.2 神经网络的表示（Neural Network Representation）</h3><p><img src="/2019/11/24/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94-%E4%B8%89/Users/11266/hexo/source/_posts/image/%E6%8D%95%E8%8E%B72.PNG" alt="捕获2"></p>
 <p>换分为： 输入层+隐藏层+输出层</p>
 <p>图示为一个两层的神经网络。</p>
 
@@ -656,7 +657,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共910字</span></div>
+  <span class="post-count">博客全站共892字</span></div>
         
 
 
