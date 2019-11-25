@@ -277,7 +277,7 @@ p {
   margin: 0 0 20px 0;
 }
 a {
-  color: #fc6423;
+  color: #222;
   text-decoration: none;
   outline: none;
   border-bottom: 1px solid #999;
@@ -921,7 +921,7 @@ pre .javascript .function {
 }
 .post-body .tabs ul.nav-tabs li.tab.active a {
   cursor: default;
-  color: #fc6423;
+  color: #222;
 }
 .post-body .tabs .tab-content {
   background-color: #fff;
@@ -1578,7 +1578,7 @@ pre .javascript .function {
   display: block;
   line-height: 25px;
   font-size: 14px;
-  color: #fc6423;
+  color: #222;
   border-bottom: none;
 }
 .post-nav-item a:hover {
@@ -1859,7 +1859,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f4ff96;
+  background: #ffff34;
 }
 .links-of-blogroll {
   font-size: 13px;
