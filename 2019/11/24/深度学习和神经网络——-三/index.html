@@ -93,7 +93,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0&#x2F;%E6%8D%95%E8%8E%B73.PNG">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0&#x2F;%E6%8D%95%E8%8E%B74.PNG">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0&#x2F;%E6%8D%95%E8%8E%B75.PNG">
-<meta property="og:updated_time" content="2019-11-25T08:28:28.903Z">
+<meta property="og:updated_time" content="2019-11-25T09:34:39.726Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0&#x2F;title.jpg">
 
@@ -370,15 +370,12 @@
 <h3 id="3-1-神经网络概述（Neural-Network-Overview）"><a href="#3-1-神经网络概述（Neural-Network-Overview）" class="headerlink" title="3.1 神经网络概述（Neural Network Overview）"></a>3.1 神经网络概述（Neural Network Overview）</h3><blockquote>
 <p>传统的一个神经对比神经网络<br><img src="/images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%8D%95%E8%8E%B71.PNG" alt="捕获1"> </p>
 </blockquote>
-<blockquote>
-<p><a href="https://blog.csdn.net/mingzhuo_126/article/details/82722455" target="_blank" rel="noopener">Tyora 插入公式</a></p>
-</blockquote>
 <h3 id="3-2-神经网络的表示（Neural-Network-Representation）"><a href="#3-2-神经网络的表示（Neural-Network-Representation）" class="headerlink" title="3.2 神经网络的表示（Neural Network Representation）"></a>3.2 神经网络的表示（Neural Network Representation）</h3><p><img src="/images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%8D%95%E8%8E%B72.PNG" alt="捕获2"></p>
 <blockquote>
 <p>换分为： 输入层+隐藏层+输出层<br>图示为一个两层的神经网络。</p>
 </blockquote>
 <h3 id="3-3-Computing-a-Neural-Network’s-Output"><a href="#3-3-Computing-a-Neural-Network’s-Output" class="headerlink" title="3.3 Computing a Neural Network’s Output"></a>3.3 Computing a Neural Network’s Output</h3><ul>
-<li><p>神经网络只是将传统的操作过程重复了多次，左图为传统的一个神经节点计算，<br>$$<br>z = w^t+b<br>$$<br>将结果 z 作为输入，通过激活函数<br>$$<br>a = sigmoid （z）<br>$$<br><img src="/images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%8D%95%E8%8E%B73.PNG" alt="捕获3"></p>
+<li><p>神经网络只是将传统的操作过程重复了多次，左图为传统的一个神经节点计算。<br>$$ z =w^{t} + b $$ 将结果 z 作为输入，通过激活函数$$ a =sigmoid(z) $$ 得 到 $$ y^hat $$<br><img src="/images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%8D%95%E8%8E%B73.PNG" alt="捕获3"></p>
 <p>在前向传播中：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A = sigmoid(np.dot(w.T,X)+b)</span><br><span class="line">cost = (<span class="number">-1</span>/m)*np.sum(Y*np.log(A)+(<span class="number">1</span>-Y)*(np.log(<span class="number">1</span>-A)))</span><br></pre></td></tr></table></figure>
 <p>反向传播中：</p>
