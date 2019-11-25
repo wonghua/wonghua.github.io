@@ -301,6 +301,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/21/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/11/21/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -391,8 +401,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/22/git/" rel="prev" title="Git中用vim打开、修改、保存文件">
-                Git中用vim打开、修改、保存文件 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/11/22/git/" rel="prev" title="hexo-next 博客搭建过程">
+                hexo-next 博客搭建过程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -424,11 +434,7 @@
 
   
     <div class="comments" id="comments">
-      
-        <div id="gitment-container"></div>
-      
     </div>
-
   
 
 
@@ -626,7 +632,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共892字</span></div>
+  <span class="post-count">博客全站共1.1k字</span></div>
         
 
 
@@ -783,43 +789,30 @@
 
 
 
-<!-- LOCAL: You can save these files to your site and update links -->
-    
-        
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-    
-<!-- END LOCAL -->
-
-    
-
-    
-      <script type="text/javascript">
-      function renderGitment(){
-        var gitment = new Gitment({
-            id: window.location.pathname, 
-            owner: 'wonghua# MUST HAVE, Your Github ID',
-            repo: 'wonghua.github.io/# MUST HAVE, The repo you use to store Gitment comments',
-            
-            oauth: {
-            
-            
-                client_secret: '436b17c37afe39d7e167914b36eb4440455912e3# EITHER this or proxy_gateway, Github access secret token for the Gitment',
-            
-                client_id: '1a28a17129ca4b06bbec# MUST HAVE, Github client id for the Gitment'
-            }});
-        gitment.render('gitment-container');
-      }
-
-      
-      renderGitment();
-      
-      </script>
-    
 
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '8tPHwSreGLsL6POFIury4qUH-gzGzoHsz# your leancloud application appid',
+        appKey: 'YUYqeGTLCnzKFvzrz25JPTpJ# your leancloud application appkey',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
