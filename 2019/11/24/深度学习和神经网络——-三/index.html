@@ -79,19 +79,20 @@
 
 
 
-<meta name="description" content="第三周：浅层神经网络(Shallow neural networks)3.1 神经网络概述（Neural Network Overview） 传统的一个神经对比神经网络     Tyora 插入公式  3.2 神经网络的表示（Neural Network Representation）  换分为： 输入层+隐藏层+输出层图示为一个两层的神经网络。">
+<meta name="description" content="第三周：浅层神经网络(Shallow neural networks)">
 <meta name="keywords" content="python,深度学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深度学习和神经网络—— 三">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;24&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94-%E4%B8%89&#x2F;index.html">
 <meta property="og:site_name" content="无名的Blog">
-<meta property="og:description" content="第三周：浅层神经网络(Shallow neural networks)3.1 神经网络概述（Neural Network Overview） 传统的一个神经对比神经网络     Tyora 插入公式  3.2 神经网络的表示（Neural Network Representation）  换分为： 输入层+隐藏层+输出层图示为一个两层的神经网络。">
+<meta property="og:description" content="第三周：浅层神经网络(Shallow neural networks)">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;ss.csdn.net&#x2F;p?https:&#x2F;&#x2F;mmbiz.qpic.cn&#x2F;mmbiz_jpg&#x2F;BnSNEaficFAZxdicWTrDlg51xh8GS1mIZVtz6icM4Pzxiahg8eiaWkok7ok0UOGeSaibfgduic4NA9jmn3WF6BCia5IxoA&#x2F;640?wx_fmt=jpeg">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0&#x2F;%E6%8D%95%E8%8E%B71.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0&#x2F;%E6%8D%95%E8%8E%B72.png">
-<meta property="og:updated_time" content="2019-11-25T04:56:23.427Z">
+<meta property="og:updated_time" content="2019-11-25T06:38:38.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0&#x2F;%E6%8D%95%E8%8E%B71.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;ss.csdn.net&#x2F;p?https:&#x2F;&#x2F;mmbiz.qpic.cn&#x2F;mmbiz_jpg&#x2F;BnSNEaficFAZxdicWTrDlg51xh8GS1mIZVtz6icM4Pzxiahg8eiaWkok7ok0UOGeSaibfgduic4NA9jmn3WF6BCia5IxoA&#x2F;640?wx_fmt=jpeg">
 
 
 
@@ -327,6 +328,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/24/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94-%E4%B8%89/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/11/24/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%92%8C%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94-%E4%B8%89/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -351,7 +362,10 @@
       
 
       
-        <h2 id="第三周：浅层神经网络-Shallow-neural-networks"><a href="#第三周：浅层神经网络-Shallow-neural-networks" class="headerlink" title="第三周：浅层神经网络(Shallow neural networks)"></a>第三周：浅层神经网络(Shallow neural networks)</h2><h3 id="3-1-神经网络概述（Neural-Network-Overview）"><a href="#3-1-神经网络概述（Neural-Network-Overview）" class="headerlink" title="3.1 神经网络概述（Neural Network Overview）"></a>3.1 神经网络概述（Neural Network Overview）</h3><blockquote>
+        <h2 id="第三周：浅层神经网络-Shallow-neural-networks"><a href="#第三周：浅层神经网络-Shallow-neural-networks" class="headerlink" title="第三周：浅层神经网络(Shallow neural networks)"></a>第三周：浅层神经网络(Shallow neural networks)</h2><p><img src="https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_jpg/BnSNEaficFAZxdicWTrDlg51xh8GS1mIZVtz6icM4Pzxiahg8eiaWkok7ok0UOGeSaibfgduic4NA9jmn3WF6BCia5IxoA/640?wx_fmt=jpeg" alt="图片"></p>
+<a id="more"></a>
+
+<h3 id="3-1-神经网络概述（Neural-Network-Overview）"><a href="#3-1-神经网络概述（Neural-Network-Overview）" class="headerlink" title="3.1 神经网络概述（Neural Network Overview）"></a>3.1 神经网络概述（Neural Network Overview）</h3><blockquote>
 <p>传统的一个神经对比神经网络</p>
 </blockquote>
 <p><img src="/images/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%8D%95%E8%8E%B71.png" alt="捕获1"> </p>
@@ -454,6 +468,9 @@
 
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -810,6 +827,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '8tPHwSreGLsL6POFIury4qUH-gzGzoHsz# your leancloud application appid',
+        appKey: 'YUYqeGTLCnzKFvzrz25JPTpJ# your leancloud application appkey',
+        placeholder: '你的言论将上交国家,请注意文明用言,否则可能被拒收或查水表 ！# comment box placeholder',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
